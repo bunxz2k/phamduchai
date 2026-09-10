@@ -92,11 +92,26 @@
             color: var(--accent);
         }
 
+        /* Hero Banner với hình nền MSS Solar tinh tế */
         .hero {
-            padding: 100px 0 60px;
+            position: relative;
+            padding: 120px 24px 80px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            border-radius: 28px;
+            margin: 30px auto 20px;
+            overflow: hidden;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            background-color: #121826;
+            background-image: 
+                radial-gradient(ellipse at center, rgba(11, 15, 25, 0.85) 0%, rgba(11, 15, 25, 0.96) 80%),
+                url('bg-solar.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         }
 
         .badge {
@@ -110,8 +125,9 @@
             font-size: 0.88rem;
             font-family: var(--code-font);
             font-weight: 500;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             border: 1px solid rgba(245, 158, 11, 0.25);
+            backdrop-filter: blur(8px);
         }
 
         .badge-dot {
@@ -126,9 +142,10 @@
             font-size: 3.4rem;
             font-weight: 800;
             line-height: 1.25;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             letter-spacing: -0.02em;
             max-width: 850px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
         }
 
         .gradient-text {
@@ -139,15 +156,16 @@
 
         .hero p {
             font-size: 1.25rem;
-            color: var(--text-muted);
+            color: #cbd5e1;
             max-width: 760px;
             line-height: 1.8;
             margin-bottom: 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
         }
 
         /* Skills Section */
         #skills {
-            padding-top: 40px;
+            padding-top: 50px;
             padding-bottom: 50px;
         }
 
@@ -162,6 +180,7 @@
             text-transform: uppercase;
             letter-spacing: 0.12em;
             margin-bottom: 12px;
+            display: inline-block;
         }
 
         .section-title {
@@ -313,7 +332,7 @@
             line-height: 1.6;
         }
 
-        /* Khoảng cách chính xác 10px giữa phần dự án và khối liên hệ */
+        /* Khoảng cách chính xác 10px */
         #contact {
             padding-top: 10px;
             padding-bottom: 50px;
@@ -428,6 +447,7 @@
         </div>
     </nav>
 
+    <!-- Khối Hero Banner tích hợp hình nền MSS Solar -->
     <header class="container hero" id="about">
         <div class="badge">
             <span class="badge-dot"></span> Tư vấn & Hỗ trợ kỹ thuật trực tuyến
@@ -438,10 +458,10 @@
         </p>
     </header>
 
-    <!-- Skills Section -->
+    <!-- Skills Section (Đã bỏ // ở chỉ mục) -->
     <section id="skills" class="container">
         <div class="section-header">
-            <div class="section-tag">// DỊCH VỤ & NĂNG LỰC CỐT LÕI</div>
+            <div class="section-tag">DỊCH VỤ & NĂNG LỰC CỐT LÕI</div>
             <h2 class="section-title">Lĩnh vực & Kỹ năng chuyên sâu</h2>
         </div>
 
@@ -472,15 +492,15 @@
         </div>
     </section>
 
-    <!-- Projects Section (Công Trình Đã Thi Công Thành Công) -->
+    <!-- Projects Section (Đã bỏ // ở chỉ mục) -->
     <section id="projects" class="container">
         <div class="section-header">
-            <div class="section-tag">// THỰC TẾ TRIỂN KHAI</div>
+            <div class="section-tag">THỰC TẾ TRIỂN KHAI</div>
             <h2 class="section-title">Công Trình Đã Thi Công Thành Công</h2>
         </div>
 
         <div class="gallery-grid">
-            <!-- Dự án 1: Lâu đài / Biệt thự cổ điển -->
+            <!-- Dự án 1: Lâu đài -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-1.jpg" alt="Dự án điện mặt trời áp mái biệt thự lâu đài">
@@ -492,7 +512,7 @@
                 </div>
             </div>
 
-            <!-- Dự án 2: Tủ điện biến tần Hybrid GoodWe -->
+            <!-- Dự án 2: GoodWe Hybrid -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-2.jpg" alt="Cụm Inverter GoodWe và hệ thống lưu trữ pin Lithium">
@@ -504,7 +524,7 @@
                 </div>
             </div>
 
-            <!-- Dự án 3: Biệt thự nhà vườn áp mái ngói -->
+            <!-- Dự án 3: Áp mái nhà vườn -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-3.jpg" alt="Điện mặt trời áp mái ngói biệt thự nhà vườn">
@@ -516,7 +536,7 @@
                 </div>
             </div>
 
-            <!-- Dự án 4: Hệ thống biến tần Solis + 3 tủ pin Dyness ESS -->
+            <!-- Dự án 4: Solis & Dyness -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-4.jpg" alt="Cụm biến tần Solis và hệ thống 3 tủ pin lưu trữ Dyness">
@@ -530,7 +550,7 @@
         </div>
     </section>
 
-    <!-- Contact Section (cách đúng 10px) -->
+    <!-- Contact Section -->
     <section id="contact" class="container">
         <div class="contact-box">
             <h2>Kết nối & Tư vấn kỹ thuật</h2>
