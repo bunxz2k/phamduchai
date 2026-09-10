@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phạm Đức Hải | Tư Vấn & Kỹ Thuật Hệ Thống Điện Mặt Trời</title>
-    <meta name="description" content="Trang web cá nhân của Phạm Đức Hải - Chuyên gia Tư Vấn Hệ Thống Điện Mặt Trời & Hỗ Trợ Kỹ Thuật, Hướng Dẫn Cài Đặt Hệ Thống.">
+    <title>MSS SOLAR | Tư Vấn & Kỹ Thuật Hệ Thống Điện Mặt Trời</title>
+    <meta name="description" content="MSS SOLAR - Phạm Đức Hải: Chuyên gia Tư Vấn Hệ Thống Điện Mặt Trời & Hỗ Trợ Kỹ Thuật, Hướng Dẫn Cài Đặt Hệ Thống.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
             backdrop-filter: blur(12px);
             background: rgba(11, 15, 25, 0.75);
             border-bottom: 1px solid var(--card-border);
-            padding: 18px 0;
+            padding: 12px 0;
         }
 
         .nav-content {
@@ -65,13 +65,24 @@
             align-items: center;
         }
 
-        .logo {
-            font-family: var(--code-font);
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--accent);
+        .logo-link {
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            letter-spacing: -0.01em;
+        }
+
+        .nav-logo-img {
+            height: 44px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            transition: transform 0.25s ease;
+        }
+
+        .logo-link:hover .nav-logo-img {
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -92,26 +103,12 @@
             color: var(--accent);
         }
 
-        /* Hero Banner với hình nền MSS Solar tinh tế */
+        /* Hero Section */
         .hero {
-            position: relative;
-            padding: 120px 24px 80px;
+            padding: 100px 0 60px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            border-radius: 28px;
-            margin: 30px auto 20px;
-            overflow: hidden;
-            border: 1px solid rgba(245, 158, 11, 0.2);
-            background-color: #121826;
-            background-image: 
-                radial-gradient(ellipse at center, rgba(11, 15, 25, 0.85) 0%, rgba(11, 15, 25, 0.96) 80%),
-                url('bg-solar.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         }
 
         .badge {
@@ -125,9 +122,8 @@
             font-size: 0.88rem;
             font-family: var(--code-font);
             font-weight: 500;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
             border: 1px solid rgba(245, 158, 11, 0.25);
-            backdrop-filter: blur(8px);
         }
 
         .badge-dot {
@@ -142,10 +138,9 @@
             font-size: 3.4rem;
             font-weight: 800;
             line-height: 1.25;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             letter-spacing: -0.02em;
             max-width: 850px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
         }
 
         .gradient-text {
@@ -156,16 +151,15 @@
 
         .hero p {
             font-size: 1.25rem;
-            color: #cbd5e1;
+            color: var(--text-muted);
             max-width: 760px;
             line-height: 1.8;
             margin-bottom: 0;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
         }
 
         /* Skills Section */
         #skills {
-            padding-top: 50px;
+            padding-top: 40px;
             padding-bottom: 50px;
         }
 
@@ -332,7 +326,7 @@
             line-height: 1.6;
         }
 
-        /* Khoảng cách chính xác 10px */
+        /* Khoảng cách chính xác 10px đến khối liên hệ */
         #contact {
             padding-top: 10px;
             padding-bottom: 50px;
@@ -435,8 +429,8 @@
 
     <nav>
         <div class="container nav-content">
-            <a href="#" class="logo">
-                <span>Phạm Đức Hải</span>
+            <a href="#" class="logo-link">
+                <img src="logo.png" alt="MSS SOLAR Logo" class="nav-logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="#about">Giới thiệu</a></li>
@@ -447,7 +441,6 @@
         </div>
     </nav>
 
-    <!-- Khối Hero Banner tích hợp hình nền MSS Solar -->
     <header class="container hero" id="about">
         <div class="badge">
             <span class="badge-dot"></span> Tư vấn & Hỗ trợ kỹ thuật trực tuyến
@@ -458,7 +451,7 @@
         </p>
     </header>
 
-    <!-- Skills Section (Đã bỏ // ở chỉ mục) -->
+    <!-- Skills Section -->
     <section id="skills" class="container">
         <div class="section-header">
             <div class="section-tag">DỊCH VỤ & NĂNG LỰC CỐT LÕI</div>
@@ -492,7 +485,7 @@
         </div>
     </section>
 
-    <!-- Projects Section (Đã bỏ // ở chỉ mục) -->
+    <!-- Projects Section -->
     <section id="projects" class="container">
         <div class="section-header">
             <div class="section-tag">THỰC TẾ TRIỂN KHAI</div>
