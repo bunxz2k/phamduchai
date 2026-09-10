@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Cá Nhân | Tech & Homelab Enthusiast</title>
-    <meta name="description" content="Trang web giới thiệu cá nhân - Đam mê Homelab, Linux Server, Quản trị hệ thống và Kỹ thuật phần cứng.">
+    <title>Phạm Đức Hải | Tư Vấn & Kỹ Thuật Hệ Thống Điện Mặt Trời</title>
+    <meta name="description" content="Trang web cá nhân của Phạm Đức Hải - Chuyên gia Tư Vấn Hệ Thống Điện Mặt Trời & Hỗ Trợ Kỹ Thuật, Hướng Dẫn Cài Đặt Hệ Thống.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,13 +13,13 @@
             --bg: #0b0f19;
             --card-bg: rgba(18, 24, 38, 0.7);
             --card-border: rgba(255, 255, 255, 0.08);
-            --accent: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.25);
-            --accent-secondary: #818cf8;
+            --accent: #f59e0b;
+            --accent-glow: rgba(245, 158, 11, 0.25);
+            --accent-secondary: #10b981;
             --text-main: #f1f5f9;
             --text-muted: #94a3b8;
-            --tag-bg: rgba(56, 189, 248, 0.1);
-            --tag-text: #7dd3fc;
+            --tag-bg: rgba(245, 158, 11, 0.1);
+            --tag-text: #fbbf24;
             --code-font: 'JetBrains Mono', monospace;
             --body-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -34,21 +34,21 @@
             font-family: var(--body-font);
             background-color: var(--bg);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
+            text-align: center;
             background-image: 
-                radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 85% 60%, rgba(129, 140, 248, 0.07) 0%, transparent 45%);
+                radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 70%, rgba(16, 185, 129, 0.06) 0%, transparent 55%);
             background-attachment: fixed;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Navigation */
         nav {
             position: sticky;
             top: 0;
@@ -56,7 +56,7 @@
             backdrop-filter: blur(12px);
             background: rgba(11, 15, 25, 0.75);
             border-bottom: 1px solid var(--card-border);
-            padding: 16px 0;
+            padding: 18px 0;
         }
 
         .nav-content {
@@ -68,17 +68,15 @@
         .logo {
             font-family: var(--code-font);
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--accent);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            letter-spacing: -0.01em;
         }
 
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             list-style: none;
         }
 
@@ -94,10 +92,11 @@
             color: var(--accent);
         }
 
-        /* Hero Section */
         .hero {
-            padding: 100px 0 70px;
-            text-align: left;
+            padding: 100px 0 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .badge {
@@ -106,13 +105,13 @@
             gap: 8px;
             background: var(--tag-bg);
             color: var(--tag-text);
-            padding: 6px 14px;
+            padding: 7px 18px;
             border-radius: 9999px;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-family: var(--code-font);
             font-weight: 500;
-            margin-bottom: 24px;
-            border: 1px solid rgba(56, 189, 248, 0.25);
+            margin-bottom: 28px;
+            border: 1px solid rgba(245, 158, 11, 0.25);
         }
 
         .badge-dot {
@@ -124,72 +123,32 @@
         }
 
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            line-height: 1.25;
+            margin-bottom: 24px;
             letter-spacing: -0.02em;
+            max-width: 850px;
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 60%, #c084fc 100%);
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #34d399 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 680px;
-            margin-bottom: 36px;
-            line-height: 1.7;
+            max-width: 760px;
+            line-height: 1.8;
+            margin-bottom: 0;
         }
 
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 26px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #0284c7, #2563eb);
-            color: #ffffff;
-            box-shadow: 0 4px 20px var(--accent-glow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid var(--card-border);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Section Layout */
-        section {
-            padding: 70px 0;
+        /* Skills Section */
+        #skills {
+            padding-top: 40px;
+            padding-bottom: 50px;
         }
 
         .section-header {
@@ -198,112 +157,174 @@
 
         .section-tag {
             font-family: var(--code-font);
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 8px;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
-        }
-
-        /* Cards Grid */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
         }
 
         .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 24px;
         }
 
         .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 28px;
+            border-radius: 20px;
+            padding: 40px 32px;
             backdrop-filter: blur(8px);
             transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .card:hover {
-            border-color: rgba(56, 189, 248, 0.3);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(245, 158, 11, 0.35);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
         }
 
         .card-icon {
-            font-size: 1.8rem;
-            margin-bottom: 16px;
+            font-size: 2.4rem;
+            margin-bottom: 20px;
             display: inline-block;
         }
 
         .card h3 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             color: var(--text-main);
         }
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
         }
 
         .tags-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
+            justify-content: center;
         }
 
         .tag {
             background: rgba(255, 255, 255, 0.05);
             color: #cbd5e1;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
             font-family: var(--code-font);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        /* Project Cards */
-        .project-card {
+        /* Projects Section */
+        #projects {
+            padding-top: 30px;
+            padding-bottom: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 24px;
+            margin-top: 10px;
+        }
+
+        .project-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            text-align: center;
         }
 
-        .project-meta {
+        .project-item:hover {
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+        }
+
+        .project-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            background: #111827;
+        }
+
+        .project-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-item:hover .project-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .project-caption {
+            padding: 22px 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 14px;
+            flex-grow: 1;
         }
 
-        .project-status {
-            font-size: 0.75rem;
+        .project-badge {
             font-family: var(--code-font);
-            color: #4ade80;
-            background: rgba(74, 222, 128, 0.1);
-            padding: 2px 8px;
-            border-radius: 4px;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            display: inline-block;
         }
 
-        /* Contact & Footer */
+        .project-caption h4 {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .project-caption p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Khoảng cách chính xác 10px giữa phần dự án và khối liên hệ */
+        #contact {
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
         .contact-box {
             text-align: center;
-            padding: 60px 24px;
-            background: linear-gradient(180deg, rgba(18, 24, 38, 0.8) 0%, rgba(11, 15, 25, 0.9) 100%);
+            padding: 50px 30px;
+            background: linear-gradient(180deg, rgba(18, 24, 38, 0.85) 0%, rgba(11, 15, 25, 0.95) 100%);
             border: 1px solid var(--card-border);
-            border-radius: 20px;
+            border-radius: 24px;
         }
 
         .contact-box h2 {
@@ -314,176 +335,203 @@
         .contact-box p {
             color: var(--text-muted);
             font-size: 1.05rem;
-            max-width: 550px;
+            max-width: 620px;
             margin: 0 auto 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .btn-facebook {
+            background: linear-gradient(135deg, #1877f2, #0d6efd);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(24, 119, 242, 0.3);
+        }
+
+        .btn-facebook:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(24, 119, 242, 0.5);
+        }
+
+        .btn-zalo {
+            background: linear-gradient(135deg, #0068ff, #0084ff);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 104, 255, 0.25);
+        }
+
+        .btn-zalo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 104, 255, 0.45);
         }
 
         footer {
             text-align: center;
             padding: 40px 0 30px;
             color: #64748b;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             border-top: 1px solid var(--card-border);
-            margin-top: 60px;
             font-family: var(--code-font);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.4rem;
+                font-size: 2.5rem;
             }
             .hero p {
-                font-size: 1.05rem;
+                font-size: 1.1rem;
             }
-            .grid-2, .grid-3 {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
                 grid-template-columns: 1fr;
             }
             .nav-links {
                 display: none;
+            }
+            #contact {
+                padding-top: 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <nav>
         <div class="container nav-content">
             <a href="#" class="logo">
-                <span>~/portfolio</span>
+                <span>Phạm Đức Hải</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#about">Giới thiệu</a></li>
-                <li><a href="#skills">Kỹ năng</a></li>
-                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#skills">Lĩnh vực chuyên sâu</a></li>
+                <li><a href="#projects">Công trình thi công</a></li>
                 <li><a href="#contact">Liên hệ</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="container hero">
+    <header class="container hero" id="about">
         <div class="badge">
-            <span class="badge-dot"></span> Sẵn sàng kết nối & trao đổi kinh nghiệm
+            <span class="badge-dot"></span> Tư vấn & Hỗ trợ kỹ thuật trực tuyến
         </div>
-        <h1>Xin chào, mình là <span class="gradient-text">[Tên Của Bạn]</span>.</h1>
+        <h1>Xin chào, mình là <span class="gradient-text">Phạm Đức Hải</span>.</h1>
         <p>
-            Đam mê hạ tầng máy chủ gia đình (Homelab), công nghệ ảo hóa Docker, hệ điều hành Linux và nghiên cứu chuẩn đoán phần cứng & phục hồi thiết bị di động.
+            Chuyên gia hỗ trợ kỹ thuật, tối ưu hóa vận hành và tư vấn các giải pháp điện mặt trời áp mái, hệ thống lưu trữ năng lượng (ESS) cho hộ gia đình và doanh nghiệp.
         </p>
-        <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Xem dự án của mình</a>
-            <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub Profile ↗</a>
-        </div>
     </header>
 
     <!-- Skills Section -->
     <section id="skills" class="container">
         <div class="section-header">
-            <div class="section-tag">// TECH STACK & EXPERTISE</div>
+            <div class="section-tag">// DỊCH VỤ & NĂNG LỰC CỐT LÕI</div>
             <h2 class="section-title">Lĩnh vực & Kỹ năng chuyên sâu</h2>
         </div>
 
-        <div class="grid-3">
-            <!-- Card 1 -->
+        <div class="grid-2">
             <div class="card">
-                <div class="card-icon">🐧</div>
-                <h3>Homelab & Linux Server</h3>
-                <p>Triển khai, quản lý dịch vụ tự lưu trữ (Self-hosted) qua Docker, bảo vệ mạng cục bộ và tối ưu hóa tài nguyên server.</p>
+                <div class="card-icon">☀️</div>
+                <h3>Tư Vấn Hệ Thống Điện Mặt Trời</h3>
+                <p>Khảo sát nhu cầu sử dụng, phân tích bức xạ nhiệt và tư vấn giải pháp tối ưu công suất. Lựa chọn cấu hình hòa lưới (On-grid), bám tải (Zero-export) hoặc hệ thống lưu trữ Hybrid phù hợp với ngân sách và hiệu quả kinh tế.</p>
                 <div class="tags-list">
-                    <span class="tag">Ubuntu</span>
-                    <span class="tag">Docker Compose</span>
-                    <span class="tag">Nginx Proxy Manager</span>
-                    <span class="tag">Portainer</span>
-                    <span class="tag">Tailscale</span>
+                    <span class="tag">Hòa Lưới & Hybrid</span>
+                    <span class="tag">Hệ Thống Bám Tải</span>
+                    <span class="tag">Phân Tích Phụ Tải</span>
+                    <span class="tag">Tối Ưu Suất Đầu Tư</span>
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Phần cứng & Firmware</h3>
-                <p>Nghiên cứu nguyên lý mạch, đo đạc chuẩn đoán socket/IC di động, khôi phục firmware chuyên sâu qua các giao thức khẩn cấp.</p>
+                <div class="card-icon">🛠️</div>
+                <h3>Hỗ Trợ Kỹ Thuật và Hướng Dẫn Cài Đặt Hệ Thống</h3>
+                <p>Hỗ trợ thiết lập thông số Inverter, cài đặt cấu hình biến tần hòa lưới/lưu trữ, đấu nối đồng hồ đo đếm (Smart Meter) và hướng dẫn giám sát, theo dõi sản lượng điện từ xa qua ứng dụng di động.</p>
                 <div class="tags-list">
-                    <span class="tag">Board Diagnostics</span>
-                    <span class="tag">EDL 9008</span>
-                    <span class="tag">Fastboot / Odin</span>
-                    <span class="tag">UnlockTool</span>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <div class="card-icon">🛡️</div>
-                <h3>Hạ tầng Mạng & Bảo mật</h3>
-                <p>Xây dựng mạng riêng ảo mã hóa, tối ưu hóa chặn quảng cáo cấp DNS và quản trị xác thực bảo mật đa lớp.</p>
-                <div class="tags-list">
-                    <span class="tag">AdGuard Home</span>
-                    <span class="tag">NextDNS</span>
-                    <span class="tag">Vaultwarden</span>
-                    <span class="tag">Uptime Kuma</span>
+                    <span class="tag">Cài Đặt Inverter</span>
+                    <span class="tag">Cấu Hình Smart Meter</span>
+                    <span class="tag">Giám Sát Từ Xa (App/Cloud)</span>
+                    <span class="tag">Xử Lý Lỗi Kỹ Thuật</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (Công Trình Đã Thi Công Thành Công) -->
     <section id="projects" class="container">
         <div class="section-header">
-            <div class="section-tag">// SHOWCASE</div>
-            <h2 class="section-title">Dự án & Hệ thống đang vận hành</h2>
+            <div class="section-tag">// THỰC TẾ TRIỂN KHAI</div>
+            <h2 class="section-title">Công Trình Đã Thi Công Thành Công</h2>
         </div>
 
-        <div class="grid-2">
-            <div class="card project-card">
-                <div>
-                    <div class="project-meta">
-                        <span class="section-tag">INFRASTRUCTURE</span>
-                        <span class="project-status">Hoạt động 24/7</span>
-                    </div>
-                    <h3>Ubuntu Homelab & Docker Cluster</h3>
-                    <p>Hệ thống máy chủ cá nhân tự lưu trữ các dịch vụ lưu trữ ảnh Immich, quản lý mật khẩu Vaultwarden, giám sát thời gian thực với Uptime Kuma và định tuyến bảo mật qua Tailscale MagicDNS.</p>
+        <div class="gallery-grid">
+            <!-- Dự án 1: Lâu đài / Biệt thự cổ điển -->
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="project-1.jpg" alt="Dự án điện mặt trời áp mái biệt thự lâu đài">
                 </div>
-                <div class="tags-list">
-                    <span class="tag">Docker</span>
-                    <span class="tag">Reverse Proxy</span>
-                    <span class="tag">Cron Automation</span>
+                <div class="project-caption">
+                    <span class="project-badge">Hoàn thành & Bàn giao</span>
+                    <h4>Hệ Thống Điện Mặt Trời Lâu Đài Cổ Điển</h4>
+                    <p>Giàn pin áp mái thiết kế giàn khung cao kiên cố, tối ưu đón nắng toàn diện mà không phá vỡ kiến trúc thẩm mỹ mái vòm.</p>
                 </div>
             </div>
 
-            <div class="card project-card">
-                <div>
-                    <div class="project-meta">
-                        <span class="section-tag">HARDWARE & MOBILE</span>
-                        <span class="project-status">Nghiên cứu & Thực nghiệm</span>
-                    </div>
-                    <h3>Mobile Diagnostic & Firmware Recovery Lab</h3>
-                    <p>Phòng thử nghiệm xử lý phân vùng UFS hỏng trên thiết bị Android, khôi phục partition table, can thiệp cấu hình nhà mạng VoLTE/IMS và sửa lỗi phần cứng board mạch logic.</p>
+            <!-- Dự án 2: Tủ điện biến tần Hybrid GoodWe -->
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="project-2.jpg" alt="Cụm Inverter GoodWe và hệ thống lưu trữ pin Lithium">
                 </div>
-                <div class="tags-list">
-                    <span class="tag">Hardware Repair</span>
-                    <span class="tag">VoLTE/IMS</span>
-                    <span class="tag">Kernel/Waydroid</span>
+                <div class="project-caption">
+                    <span class="project-badge">Chuẩn kỹ thuật cao</span>
+                    <h4>Hệ Thống Lưu Trữ ESS & Inverter GoodWe</h4>
+                    <p>Đấu nối tủ điện bảo vệ đóng cắt ATS, biến tần hybrid GoodWe kết hợp cụm pin lưu trữ Lithium cao cấp, vận hành êm ái.</p>
+                </div>
+            </div>
+
+            <!-- Dự án 3: Biệt thự nhà vườn áp mái ngói -->
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="project-3.jpg" alt="Điện mặt trời áp mái ngói biệt thự nhà vườn">
+                </div>
+                <div class="project-caption">
+                    <span class="project-badge">Tối ưu hiệu suất</span>
+                    <h4>Hệ Thống Áp Mái Biệt Thự Nhà Vườn</h4>
+                    <p>Thi công giàn khung chịu lực hướng Nam đón nắng tối đa, cung cấp nguồn năng lượng sạch bền bỉ cho toàn bộ phụ tải gia đình.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (cách đúng 10px so với khối trên) -->
     <section id="contact" class="container">
         <div class="contact-box">
-            <h2>Kết nối cùng mình</h2>
-            <p>Bạn quan tâm đến việc thiết lập Homelab, quản trị Linux hay thảo luận về kỹ thuật phần cứng? Đừng ngần ngại liên hệ nhé!</p>
-            <div class="hero-actions" style="justify-content: center;">
-                <a href="mailto:email-cua-ban@gmail.com" class="btn btn-primary">Gửi Email</a>
-                <a href="https://github.com" target="_blank" class="btn btn-secondary">Theo dõi trên GitHub</a>
+            <h2>Kết nối & Tư vấn kỹ thuật</h2>
+            <p>Bạn đang quan tâm đến việc lắp đặt hệ thống điện mặt trời hoặc cần hỗ trợ cài đặt, xử lý sự cố thiết bị? Hãy liên hệ ngay để trao đổi trực tiếp.</p>
+            <div class="hero-actions">
+                <a href="https://www.facebook.com/MatVuMeowMeow" target="_blank" class="btn btn-facebook">Facebook: Phạm Đức Hải ↗</a>
+                <a href="https://zalo.me/0896153425" target="_blank" class="btn btn-zalo">Zalo: 0896153425 ↗</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="container">
-        <p>&copy; 2026 Personal Portfolio. Hosted on GitHub Pages.</p>
+        <p>&copy; 2026 Phạm Đức Hải. Hosted on GitHub Pages.</p>
     </footer>
 
 </body>
