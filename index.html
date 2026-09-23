@@ -49,74 +49,34 @@
             padding: 0 24px;
         }
 
-        nav {
-            position: sticky;
+nav {
+            position: fixed; /* Đổi thành fixed để thanh menu nổi lên trên banner */
             top: 0;
-            z-index: 100;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
             backdrop-filter: blur(12px);
-            background: rgba(11, 15, 25, 0.75);
-            border-bottom: 1px solid var(--card-border);
+            background: rgba(11, 15, 25, 0.6); /* Làm trong suốt hơn một chút */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             padding: 12px 0;
         }
 
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .nav-logo-img {
-            height: 44px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            transition: transform 0.25s ease;
-        }
-
-        .logo-link:hover .nav-logo-img {
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Hero Banner */
+        /* Hero Banner Tràn Viền */
         .hero {
             position: relative;
-            padding: 120px 24px 80px;
+            /* Tăng padding top để chữ không bị thanh menu che mất */
+            padding: 180px 24px 120px; 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border-radius: 28px;
-            margin: 30px auto 20px;
+            width: 100vw; /* Rộng tràn màn hình */
+            min-height: 85vh; /* Cao bằng 85% màn hình hiển thị */
+            margin: 0; /* Xóa margin */
+            border-radius: 0; /* Xóa bo góc */
+            border: none; /* Xóa viền */
             overflow: hidden;
-            border: 1px solid rgba(245, 158, 11, 0.25);
             background-color: #121826;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         }
 
         /* Thêm Slider làm nền, đẩy từ phải sang trái liên tục */
@@ -538,7 +498,7 @@
     </nav>
 
     <!-- Khối Hero Banner với Background Slider (Ảnh di chuyển từ phải qua trái) -->
-    <header class="container hero" id="about">
+    <header class="hero" id="about">
         <!-- Slider nền chuyển động từ phải sang trái -->
         <div class="hero-bg-slider">
             <div class="slide active" style="background-image: url('event/1.jpg');"></div>
