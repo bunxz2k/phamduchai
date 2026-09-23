@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSS SOLAR | Tư Vấn & Kỹ Thuật Hệ Thống Điện Mặt Trời</title>
-    <meta name="description" content="MSS SOLAR - Phạm Đức Hải: Chuyên gia Tư Vấn Hệ Thống Điện Mặt Trời & Hỗ Trợ Kỹ Thuật, Hướng Dẫn Cài Đặt Hệ Thống.">
+    <title>MSS SOLAR | Sự Kiện Nổi Bật</title>
+    <meta name="description" content="MSS SOLAR : Chuyên gia Hệ Thống Điện Mặt Trời">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@
             color: var(--accent);
         }
 
-        /* Hero Banner kết hợp đầy đủ Background MSS Solar */
+        /* Hero Banner */
         .hero {
             position: relative;
             padding: 120px 24px 80px;
@@ -116,13 +116,64 @@
             overflow: hidden;
             border: 1px solid rgba(245, 158, 11, 0.25);
             background-color: #121826;
-            background-image: 
-                radial-gradient(ellipse at center, rgba(11, 15, 25, 0.85) 0%, rgba(11, 15, 25, 0.96) 80%),
-                url('bg-solar.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Thêm Slider làm nền, đẩy từ phải sang trái liên tục */
+        .hero-bg-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transform: translateX(100%); /* Bắt đầu từ bên phải ngoài màn hình */
+            transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0); /* Nằm chính giữa */
+        }
+
+        .slide.exit {
+            opacity: 0;
+            transform: translateX(-100%); /* Trượt tiếp ra bên trái */
+        }
+
+        /* Lớp phủ tối đè lên ảnh nền để dễ đọc chữ */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(11, 15, 25, 0.8) 0%, rgba(11, 15, 25, 0.94) 85%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Đảm bảo nội dung chữ luôn nổi lên trên slider */
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .badge {
@@ -172,6 +223,33 @@
             line-height: 1.8;
             margin-bottom: 0;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Navigation Dots cho Slider */
+        .slider-dots {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 4;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--accent);
+            transform: scale(1.2);
+            box-shadow: 0 0 8px var(--accent-glow);
         }
 
         /* Skills Section */
@@ -343,7 +421,7 @@
             line-height: 1.6;
         }
 
-        /* Khoảng cách 10px đến khối liên hệ */
+        /* Contact Section */
         #contact {
             padding-top: 10px;
             padding-bottom: 50px;
@@ -459,15 +537,32 @@
         </div>
     </nav>
 
-    <!-- Khối Hero Banner giữ trọn hình nền bg-solar.jpg -->
+    <!-- Khối Hero Banner với Background Slider (Ảnh di chuyển từ phải qua trái) -->
     <header class="container hero" id="about">
-        <div class="badge">
-            <span class="badge-dot"></span> Tư vấn & Hỗ trợ kỹ thuật trực tuyến
+        <!-- Slider nền chuyển động từ phải sang trái -->
+        <div class="hero-bg-slider">
+            <div class="slide active" style="background-image: url('event/1.jpg');"></div>
+            <div class="slide" style="background-image: url('event/2.jpg');"></div>
         </div>
-        <h1>Xin chào, mình là <span class="gradient-text">Phạm Đức Hải</span>.</h1>
-        <p>
-            Chuyên gia hỗ trợ kỹ thuật, tối ưu hóa vận hành và tư vấn các giải pháp điện mặt trời áp mái, hệ thống lưu trữ năng lượng (ESS) cho hộ gia đình và doanh nghiệp.
-        </p>
+        
+        <!-- Lớp phủ mờ tối để chữ hiển thị tốt -->
+        <div class="hero-overlay"></div>
+
+        <!-- Chấm điều hướng Slider (Chỉ hiển thị dots) -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="setCurrentSlide(0)"></span>
+            <span class="dot" onclick="setCurrentSlide(1)"></span>
+        </div>
+
+        <div class="hero-content">
+            <div class="badge">
+                <span class="badge-dot"></span> Tư vấn & Hỗ trợ kỹ thuật trực tuyến
+            </div>
+            <h1>Xin chào, mình là <span class="gradient-text">Phạm Đức Hải</span>.</h1>
+            <p>
+                Chuyên gia hỗ trợ kỹ thuật, tối ưu hóa vận hành và tư vấn các giải pháp điện mặt trời áp mái, hệ thống lưu trữ năng lượng (ESS) cho hộ gia đình và doanh nghiệp.
+            </p>
+        </div>
     </header>
 
     <!-- Skills Section -->
@@ -512,7 +607,7 @@
         </div>
 
         <div class="gallery-grid">
-            <!-- Dự án 1: Lâu đài -->
+            <!-- Dự án 1 -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-1.jpg" alt="Dự án điện mặt trời áp mái biệt thự lâu đài">
@@ -524,7 +619,7 @@
                 </div>
             </div>
 
-            <!-- Dự án 2: GoodWe Hybrid -->
+            <!-- Dự án 2 -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-2.jpg" alt="Cụm Inverter GoodWe và hệ thống lưu trữ pin Lithium">
@@ -536,7 +631,7 @@
                 </div>
             </div>
 
-            <!-- Dự án 3: Áp mái nhà vườn -->
+            <!-- Dự án 3 -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-3.jpg" alt="Điện mặt trời áp mái ngói biệt thự nhà vườn">
@@ -548,7 +643,7 @@
                 </div>
             </div>
 
-            <!-- Dự án 4: Solis & Dyness -->
+            <!-- Dự án 4 -->
             <div class="project-item">
                 <div class="project-img-wrapper">
                     <img src="project-4.jpg" alt="Cụm biến tần Solis và hệ thống 3 tủ pin lưu trữ Dyness">
@@ -577,6 +672,47 @@
     <footer class="container">
         <p>&copy; 2026 Phạm Đức Hải. Designed By Phạm Đức Hải.</p>
     </footer>
+
+    <!-- Slider JS -->
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        let slideInterval = setInterval(nextSlide, 5000); // Tự động chuyển hình sau mỗi 5 giây
+
+        function nextSlide() {
+            goToSlide((currentSlideIndex + 1) % totalSlides);
+        }
+
+        function goToSlide(nextIndex) {
+            if (nextIndex === currentSlideIndex) return;
+
+            // Xóa hết trạng thái exit trước đó
+            slides.forEach(s => s.classList.remove('exit'));
+
+            // Đánh dấu ảnh cũ đang thoát bằng hiệu ứng đẩy sang trái
+            const currentSlide = slides[currentSlideIndex];
+            currentSlide.classList.remove('active');
+            currentSlide.classList.add('exit');
+
+            // Set ảnh tiếp theo thành active
+            const nextSlide = slides[nextIndex];
+            nextSlide.classList.add('active');
+
+            // Cập nhật chấm điều hướng (dots)
+            dots[currentSlideIndex].classList.remove('active');
+            dots[nextIndex].classList.add('active');
+
+            currentSlideIndex = nextIndex;
+        }
+
+        function setCurrentSlide(index) {
+            clearInterval(slideInterval); // Tạm dừng tự động khi người dùng nhấp chấm điều hướng
+            goToSlide(index);
+            slideInterval = setInterval(nextSlide, 5000); // Bắt đầu lại
+        }
+    </script>
 
 </body>
 </html>
